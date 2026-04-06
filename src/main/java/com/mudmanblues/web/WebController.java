@@ -10,4 +10,14 @@ public class WebController {
     public String home() {
         return "about";
     }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+    @GetMapping("/songs")
+    public String songs() {
+        return "songs";
+    }
 }

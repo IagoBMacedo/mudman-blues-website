@@ -1,53 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" 
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout}">
+
     <head>
-        <meta charset="UTF-8">
         <title>What is Mudman Blues?</title>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Semi+Condensed:wght@500;700&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" th:href="@{/css/style.css}">
     </head>
+
     <body>
 
-        <nav class="container">
-            <a th:href="@{/}" class="menu-item">Home</a>
-            <a th:href="@{/about}" class="menu-item">About</a>
-        </nav>
+        <section layout:fragment="content">
+            <div class="container">
+                <h1>What is Mudman Blues?</h1>
 
-        <main class="container">
-            <h1>What is Mudman Blues?</h1>
+                <p>In May 2024 I founded Mudman Blues, a solo musical project which mixes loose storytelling with surreal nonsense... 
+                    and a touch of sobriety, sometimes. </p>
 
-            <p>In May 2024 I founded Mudman Blues, a solo musical project which mixes loose storytelling with surreal nonsense... 
-                and a touch of sobriety, sometimes. </p>
+                <div class="about-image">
+                    <img th:src="@{/images/mudman-collection-cover.png}" alt="Mudman Blues">
+                </div>
 
-            <div class="about-image">
-                <img th:src="@{/images/mudman-collection-cover.png}" alt="Mudman Blues">
+                <p>In the catalog, you might find songs in English, Portuguese, and Russian. Although similar in texture, there is a deliberate
+                    attempt to let each language bring its own set of nuances. Feel free to explore them and find out what these nuances
+                    might be, as I do not intend to name them here, nor am I sure I could.</p>
+
+                <p>What is special about this project? My singing isn't particularly good, my playing can be stiff, and the lyrics 
+                    aren't terrific either. There is, however, a little world that made its way into my music, quite unexpectedly. 
+                    Characters and places have their own particularities and depths. Picture a place called Geode Rocks, where a man called 
+                    Mr. Storm and a painter named Andre share laughs, and up in the sky a weasel flies alongside Fluttengton, a flute player
+                    travelling atop a giant enchanted pear. I don't know where these things came from, yet I do my best to portray this world, 
+                    feeling deeply compelled by its imagery.</p>
+
+                <p>There is no sorrow without love, and there is no love without sorrow. I support the idea that melancholy is not the 
+                    lack of hope, insofar as it is the most important step towards hope, as hope can only come from a genuine place, and there 
+                    is nothing as sincere as a dim sense of sorrow. I must add, however, that the melancholic aspect of Mudman Blues was not a 
+                    deliberate choice. <em>Come Home, Little Bird</em> was the first song I ever wrote, and from the first line it brought to me 
+                    the very essence of the project's nature: "once we had the time for desperation..."</p>
+
+                <p>I must beg you not to confuse the voice in the songs with the one behind it. Although it’s definitely akin, 
+                    I have my own flaws, and calling me the Mudman would stray from the project’s original intent. Mudman Blues is, above all, 
+                    a sonic world shaped by ideas and insecurities that may, in some way, belong to anyone. </p>
             </div>
-
-            <p>In the catalog, you might find songs in English, Portuguese, and Russian. Although similar in texture, there is a deliberate
-                attempt to let each language bring its own set of nuances. Feel free to explore them and find out what these nuances
-                might be, as I do not intend to name them here, nor am I sure I could.</p>
-
-            <p>What is special about this project? My singing isn't particularly good, my playing can be stiff, and the lyrics 
-                aren't terrific either. There is, however, a little world that made its way into my music, quite unexpectedly. 
-                Characters and places have their own particularities and depths. Picture a place called Geode Rocks, where a man called 
-                Mr. Storm and a painter named Andre share laughs, and up in the sky a weasel flies alongside Fluttengton, a flute player
-                travelling atop a giant enchanted pear. I don't know where these things came from, yet I do my best to portray this world, 
-                feeling deeply compelled by its imagery.</p>
-
-            <p>There is no sorrow without love, and there is no love without sorrow. I support the idea that melancholy is not the 
-                lack of hope, insofar as it is the most important step towards hope, as hope can only come from a genuine place, and there 
-                is nothing as sincere as a dim sense of sorrow. I must add, however, that the melancholic aspect of Mudman Blues was not a 
-                deliberate choice. <em>Come Home, Little Bird</em> was the first song I ever wrote, and from the first line it brought to me 
-                the very essence of the project's nature: "once we had the time for desperation..."</p>
-
-            <p>I must beg you not to confuse the voice in the songs with the one behind it. Although it’s definitely akin, 
-                I have my own flaws, and calling me the Mudman would stray from the project’s original intent. Mudman Blues is, above all, 
-                a sonic world shaped by ideas and insecurities that may, in some way, belong to anyone. </p>
-        </main>
-
+        </section>
     </body>
 </html>
