@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$CONTENT_TITLE - Mudman Blues">
+        Mudman Blues
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Semi+Condensed:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<nav class="container main-nav">
+    <a th:href="@{/}" class="menu-item">Home</a>
+    <a th:href="@{/about}" class="menu-item">About</a>
+    <a th:href="@{/songs}" class="menu-item">Songs</a>
+</nav>
+
+<main layout:fragment="content">
+</main>
+
+</body>
+</html>
