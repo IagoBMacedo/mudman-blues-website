@@ -29,4 +29,11 @@ public class SongController {
         model.addAttribute("song", song);
         return "song";
     }
+
+    @GetMapping("/songs")
+    public String getSongs(Model model) {
+        Iterable<Song> songs = songRepository.findAll();
+        model.addAttribute("songs", songs);
+        return "songs";
+    }
 }

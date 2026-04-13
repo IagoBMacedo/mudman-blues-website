@@ -15,9 +15,4 @@ public class WebController {
     public String about() {
         return "about";
     }
-
-    @GetMapping("/songs")
-    public String songs() {
-        return "songs";
-    }
 }

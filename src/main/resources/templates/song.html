@@ -5,12 +5,12 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 layout:decorate="~{layout}">
 </html>
 
-    <main class="container">
-        <h1 th:text="${song.title}">Song Title</h1>
-        
-        <div class="video-container">
-            <iframe th:src="${'https://www.youtube.com/embed/' + song.videoId}"></iframe>
-        </div>
+<main class="container">
+    <h1 th:text="${song.title}">Song Title</h1>
+    
+    <div class="video-container">
+        <iframe th:src="${'https://www.youtube.com/embed/' + song.videoId}"></iframe>
+    </div>
 
-        <pre class="lyrics" th:text="${song.lyrics}">Song Lyrics</pre>
-    </main>
+    <pre class="lyrics" th:text="${song.lyrics}">Song Lyrics</pre>
+</main>

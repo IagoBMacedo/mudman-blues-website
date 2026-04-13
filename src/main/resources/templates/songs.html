@@ -1,7 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" 
-xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layout}">
-</html>
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Songs</title>
+</head>
+<body>
 
+    <main layout:fragment="content" class="container">
+        <h1>Songs</h1>
+
+        <select name="Album" id="album">
+            <option value="All" selected>All albums</option>
+            <option value="Gatos da KGB">Gatos da KGB</option>
+            <option value="O Iglu">O Iglu</option>
+            <option value="Back to the Mud">Back to the Mud</option>
+        </select>
+
+        <select name="Language" id="language">
+            <option value="All" selected>All languages</option>
+            <option value="en">English</option>
+            <option value="pt">Portuguese</option>
+            <option value="ru">Russian</option>
+        </select>
+        
+        <div class="song-list">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Language</th>
+                    <th>Album</th>
+                </tr>
+                <tr th:each="song : ${songs}" 
+                    th:data-language="${song.language}" 
+                    th:data-album="${song.album}" 
+                    class="song-row">
+                    <td><a th:href="@{/songs/{slug}(slug=${song.slug})}" th:text="${song.title}">Song Title</a></td>
+                    <td th:text="${song.language}">Language</td>
+                    <td th:text="${song.album}">Album Name</td>
+                </tr>
+            </table>
+        </div>
+        <script th:src="@{/js/script.js}"></script>
+    </main> </body>
+</html>

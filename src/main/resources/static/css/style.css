@@ -36,7 +36,7 @@
     margin: 0 15px;
 }
 
-/* END OF NAVBAR */
+/* SONGS SECTION */
 
 h1, .menu-item {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -59,18 +59,20 @@ p, .lyrics {
     width: 120%;
     aspect-ratio: 16 / 9;
     display: block;
+    border-width: 0px;
 }
 
 
 .video-container {
     float: right;
-
 }
 
 h1 {
     padding-top: 60px;
     margin-bottom: 40px;
 }
+
+/* IMAGES */
 
 .about-image {
     margin-top: 30px;  
@@ -84,3 +86,49 @@ h1 {
     display: block;
     margin: 0 auto;
 }
+
+/* TABLE */
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-family: 'Barlow', sans-serif;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding-inline: 2px;
+    padding-block: 4px;
+}
+
+td {
+    text-align: left;
+}
+
+th {
+    background-color: black;
+    text-align: center;
+    color: white;
+    border-color: white;
+}
+
+td a {
+    color: black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+td:nth-child(2), td:nth-child(3) {
+    text-align: center;
+}
+
+select {
+    padding: 2px;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 5px 1px;
+    background-color: black;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
