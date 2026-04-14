@@ -15,3 +15,17 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# DBs
+*.mv.db
+*.trace.db
+songs.sqlite
+
+# IDE settings
+.settings/
+.bin/
+.tmp/
+.vscode/
+
+# Environment files
+.env
